@@ -1,0 +1,23 @@
+name: Rozpakuj paczke strony
+on:
+  push:
+    paths: ['_upload/*.zip']
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rozpakuj _upload/site.zip i podmien pliki strony
+        run: |
+          set -e
+          mkdir -p /tmp/site && unzip -q -o _upload/site.zip -d /tmp/site
+          rsync -a --delete --exclude '.git/' --exclude '.github/' --exclude '_upload/' /tmp/site/ ./
+          git rm -q --cached _upload/site.zip || true
+          rm -f _upload/site.zip
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Aktualizacja strony z paczki site.zip" || echo "Brak zmian"
+          git push
