@@ -28,5 +28,6 @@ const id = 'nl-' + variant;
     f.browser_lang.value = (navigator.languages && navigator.languages[0]) || navigator.language || '';
     var otworz = function () { f.querySelectorAll('.nl-extra[hidden]').forEach(function (e) { e.hidden = false; }); };
     f.addEventListener('focusin', otworz); f.addEventListener('input', otworz);
+    f.addEventListener('submit', function () { try { sessionStorage.setItem('nl_email', f.email.value.trim()); } catch (x) {} });
   }
 </script>
