@@ -1,0 +1,23 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../data/site';
+---
+<Page title="Polityka prywatności | ePerfumeria" description="Jak ePerfumeria (QLINIQUE Sp. z o.o.) przetwarza dane osobowe: zapytania, zamówienia, newsletter, pliki cookies i Twoje prawa wynikające z RODO." eyebrow="Informacje" h1="Polityka prywatności" lead="Ostatnia aktualizacja: 22 listopada 2026 r.">
+  <h2>1. Administrator</h2>
+  <p>Administratorem danych osobowych jest {SITE.company}, {SITE.street}, {SITE.zip} {SITE.city}, KRS {SITE.krs}, NIP {SITE.nip}. Kontakt: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+  <h2>2. Jakie dane przetwarzamy i w jakim celu</h2>
+  <ul>
+    <li><strong>Zapytania i zamówienia</strong> (imię i nazwisko, firma, e-mail, telefon, adres, NIP): odpowiedź na wiadomość, przygotowanie oferty, realizacja zamówienia i wystawienie faktury (art. 6 ust. 1 lit. b i c RODO).</li>
+    <li><strong>Newsletter</strong> (e-mail, nazwa firmy, miasto): wysyłka ofert, jeśli wyraziłeś zgodę (art. 6 ust. 1 lit. a RODO). Zgodę możesz wycofać w każdej chwili linkiem w każdym e-mailu.</li>
+    <li><strong>Analityka</strong>: tylko jeśli zaakceptujesz cookies analityczne (art. 6 ust. 1 lit. a RODO).</li>
+    <li><strong>Bezpieczeństwo i logi serwera</strong>: dane techniczne, np. adres IP, potrzebne do działania i ochrony serwisu (art. 6 ust. 1 lit. f RODO).</li>
+  </ul>
+  <h2>3. Odbiorcy danych</h2>
+  <p>Korzystamy z zaufanych podmiotów przetwarzających: Cloudflare (hosting i bezpieczeństwo), dhosting.pl (formularze, poczta e-mail), dostawcy narzędzi do wysyłki newslettera, biuro rachunkowe i firmy kurierskie. Jeśli dane są przekazywane poza Europejski Obszar Gospodarczy, odbywa się to na podstawie standardowych klauzul umownych.</p>
+  <h2>4. Jak długo przechowujemy dane</h2>
+  <p>Dane z zamówień i faktur: przez okres wymagany przepisami podatkowymi (zwykle 5 lat od końca roku). Zapytania: do 2 lat. Newsletter: do czasu wypisania się.</p>
+  <h2>5. Twoje prawa</h2>
+  <p>Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania i przeniesienia, prawo sprzeciwu oraz prawo wycofania zgody. Możesz też złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa.</p>
+  <h2>6. Pliki cookies</h2>
+  <p>Używamy tylko plików cookies i pamięci przeglądarki niezbędnych do działania serwisu (np. zapamiętanie Twojego wyboru dotyczącego cookies i zawartości zamówienia w wyszukiwarce). Cookies analityczne zapisujemy dopiero po Twojej zgodzie w banerze. Zmienisz ją w każdej chwili w <a href="#" onclick="document.getElementById('cookie').style.display='block';return false">ustawieniach cookies</a>.</p>
+</Page>

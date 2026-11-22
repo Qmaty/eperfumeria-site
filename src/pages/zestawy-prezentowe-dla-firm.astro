@@ -1,0 +1,28 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../data/site';
+import ContactForm from '../components/ContactForm.astro';
+---
+<Page img="zestawy" imgAlt="Zestawy prezentowe perfum i kosmetyków na tle logo ePerfumeria" imgPos="50% 50%" title="Zestawy prezentowe perfum i kosmetyków dla firm - hurt | ePerfumeria" description="Świąteczne zestawy prezentowe perfum i kosmetyków dla pracowników i klientów. Hurtowe ilości od 100 sztuk, oryginalne marki, dostawa do firmy." eyebrow="Zestawy prezentowe dla firm" h1="Zestawy prezentowe z perfum i kosmetyków dla pracowników i klientów" lead="Potrzebujesz 100, 500 albo 1000 zestawów? Przygotujemy ofertę dopasowaną do Twojego budżetu, z dostawą do Twojej firmy.">
+  <p>Markowe perfumy i kosmetyki to elegancki, uniwersalny prezent na święta, jubileusz firmy czy w programie lojalnościowym. Łączymy oferty ponad {SITE.suppliers} europejskich dostawców, więc możemy skompletować zestawy w niemal każdej konfiguracji i budżecie, wyłącznie z oryginalnych produktów.</p>
+  <h2>Dla kogo przygotowujemy zestawy</h2>
+  <ul>
+    <li><strong>Prezenty dla pracowników</strong>: paczki świąteczne dla zespołów, markowe zestawy kosmetyków i perfumy.</li>
+    <li><strong>Upominki dla klientów i partnerów</strong>: eleganckie zestawy, które budują relacje i wizerunek firmy.</li>
+    <li><strong>Programy lojalnościowe i akcje marketingowe</strong>: duże, powtarzalne ilości w stałej cenie.</li>
+  </ul>
+  <h2>Przykładowe zestawy dostępne w hurcie</h2>
+  <p>Dostępność i ceny zmieniają się z tygodnia na tydzień, dlatego aktualną ofertę z cenami i ilościami wysyłamy w odpowiedzi na zapytanie.</p>
+  <div class="offers"><div class="offer"><img src="/img/p-oldspice.webp" alt="Old Spice Urban TravelBag: sztyft, spray, żel pod prysznic + kosmetyczka" width="600" height="600" loading="lazy" /><b>Old Spice Urban TravelBag: sztyft, spray, żel pod prysznic + kosmetyczka</b></div><div class="offer"><img src="/img/p-pepejeans.webp" alt="Pepe Jeans Addictive For Him: woda perfumowana 100 ml + żel pod prysznic" width="600" height="600" loading="lazy" /><b>Pepe Jeans Addictive For Him: woda perfumowana 100 ml + żel pod prysznic</b></div><div class="offer"><img src="/img/p-loreal.webp" alt="L'Oréal Paris: tusz Voluminous Extra Black + kosmetyczka" width="600" height="600" loading="lazy" /><b>L'Oréal Paris: tusz Voluminous Extra Black + kosmetyczka</b></div><div class="offer"><img src="/img/p-pupa.webp" alt="Pupa Milano Vamp: tusz do rzęs + kredka do oczu + kosmetyczka" width="600" height="600" loading="lazy" /><b>Pupa Milano Vamp: tusz do rzęs + kredka do oczu + kosmetyczka</b></div><div class="offer"><img src="/img/p-pupa-teddy.webp" alt="Pupa Milano Teddyland: żel pod prysznic + peeling + kosmetyczka" width="600" height="600" loading="lazy" /><b>Pupa Milano Teddyland: żel pod prysznic + peeling + kosmetyczka</b></div><div class="offer"><img src="/img/p-lattafa.webp" alt="Lattafa: zestaw miniatur perfum arabskich" width="600" height="600" loading="lazy" /><b>Lattafa: zestaw miniatur perfum arabskich</b></div><div class="offer"><img src="/img/p-yankee.webp" alt="Yankee Candle Countdown to Christmas: zestaw wosków zapachowych" width="600" height="600" loading="lazy" /><b>Yankee Candle Countdown to Christmas: zestaw wosków zapachowych</b></div></div>
+  <h2>Dlaczego ePerfumeria</h2>
+  <ul>
+    <li><strong>Skala</strong>: ponad {SITE.products} produktów, od marek drogeryjnych po perfumy selektywne i niszowe.</li>
+    <li><strong>Terminowość</strong>: dostawa zwykle do 14 dni, co pozwala spokojnie domknąć przygotowania przed świętami.</li>
+    <li><strong>Budżet pod kontrolą</strong>: dobieramy zestawy do Twoich widełek cenowych netto.</li>
+    <li><strong>Pewne źródła</strong>: wyłącznie oryginalne, fabrycznie nowe produkty z dystrybucji w UE.</li>
+  </ul>
+  <h2 id="form">Wyślij zapytanie o zestawy</h2>
+  <p>Napisz, jakie zestawy Cię interesują (perfumy, kosmetyki, makijaż, świece zapachowe), preferowane marki, liczbę zestawów, budżet netto na zestaw i termin dostawy.</p>
+  <ContactForm topic="Zapytanie o zestawy prezentowe: " placeholder="Rodzaj zestawów, marki, liczba sztuk, budżet netto na zestaw, termin dostawy" />
+
+</Page>

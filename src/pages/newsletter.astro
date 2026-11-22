@@ -1,0 +1,30 @@
+---
+import Page from '../layouts/Page.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
+---
+<Page img="newsletter" imgAlt="Pudełka prezentowe ePerfumeria" title="Newsletter - okazje hurtowe na perfumy i kosmetyki | ePerfumeria" description="Zapisz się do newslettera B2B ePerfumeria: obniżki cen, towar z krótszą datą, nowe marki i cenniki. Najwyżej jeden e-mail w tygodniu." eyebrow="Newsletter" h1="Okazje hurtowe w Twojej skrzynce" lead="Obniżki cen, towar z krótszą datą i nowe marki. Najwyżej jeden e-mail w tygodniu, tylko dla firm.">
+  <div class="nl-msg" id="nl-msg" role="status" hidden></div>
+  <NewsletterForm variant="page" source="newsletter-page" />
+  <h2>Co dostaniesz</h2>
+  <ul>
+    <li>obniżki cen i oferty specjalne dostawców, zanim się wyprzedadzą,</li>
+    <li>towar z krótszą datą i wyprzedaże w wyjątkowo niskich cenach,</li>
+    <li>nowe marki i nowe cenniki dystrybucji (L'Oréal, Coty i inne),</li>
+    <li>sezonowe podpowiedzi: zestawy świąteczne, letnie bestsellery, prezenty firmowe.</li>
+  </ul>
+  <p>Wysyłamy najwyżej jeden e-mail w tygodniu, wyłącznie do firm. Po zapisie dostaniesz e-mail z linkiem potwierdzającym. Z newslettera wypiszesz się w każdej chwili jednym kliknięciem.</p>
+  <script is:inline>
+    (function () {
+      var p = new URLSearchParams(location.search), q = p.get('email'), s = p.get('nl');
+      if (q) { var e = document.getElementById('nl-page-email'); if (e) e.value = q; }
+      if (!s) return;
+      var m = { check: ['ok', 'Prawie gotowe! Wysłaliśmy Ci e-mail - kliknij link w środku, żeby potwierdzić zapis. Jeśli go nie widzisz, sprawdź folder spam.'],
+        confirmed: ['ok', 'Dziękujemy! Zapis potwierdzony. Najbliższe okazje hurtowe trafią do Twojej skrzynki.'],
+        already: ['ok', 'Ten adres jest już zapisany. Dziękujemy!'],
+        expired: ['err', 'Ten link wygasł lub został już użyty. Zapisz się ponownie.'],
+        email: ['err', 'Podaj poprawny adres e-mail.'], consent: ['err', 'Zaznacz zgodę, żeby się zapisać.'],
+        limit: ['err', 'Zbyt wiele prób z Twojego połączenia. Spróbuj później.'], error: ['err', 'Coś poszło nie tak. Spróbuj ponownie albo napisz na info@eperfumeria.eu.'] };
+      var v = m[s] || m.error, b = document.getElementById('nl-msg'); b.className = 'nl-msg ' + v[0]; b.textContent = v[1]; b.hidden = false;
+    })();
+  </script>
+</Page>

@@ -1,0 +1,53 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../data/site';
+---
+<Page title="Regulamin sprzedaży hurtowej | ePerfumeria" description="Regulamin sprzedaży hurtowej (B2B) perfum i kosmetyków w serwisie eperfumeria.eu prowadzonym przez QLINIQUE Sp. z o.o." eyebrow="Regulamin" h1="Regulamin sprzedaży hurtowej" lead="Obowiązuje od 1 grudnia 2026 r.">
+  <h2>1. Sprzedawca</h2>
+  <p>Serwis eperfumeria.eu prowadzi {SITE.company} z siedzibą w Warszawie, {SITE.street}, {SITE.zip} {SITE.city}, wpisana do rejestru przedsiębiorców KRS pod numerem {SITE.krs}, NIP {SITE.nip}, REGON {SITE.regon} („Sprzedawca”). Kontakt: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>, tel. {SITE.phone}.</p>
+  <h2>2. Zakres i Kupujący</h2>
+  <ol>
+    <li>Regulamin określa zasady sprzedaży hurtowej perfum i kosmetyków przez Sprzedawcę.</li>
+    <li>Sprzedaż prowadzona jest wyłącznie na rzecz przedsiębiorców, którzy kupują towar w związku ze swoją działalnością gospodarczą („Kupujący”). Sprzedawca nie zawiera umów z konsumentami.</li>
+    <li>Sprzedawca nie świadczy usługi dropshippingu i nie wysyła towaru do klientów Kupującego.</li>
+  </ol>
+  <h2>3. Ceny i informacje o produktach</h2>
+  <ol>
+    <li>Ceny w cennikach i wyszukiwarce są cenami hurtowymi netto w złotych, do których dolicza się podatek VAT według obowiązujących przepisów.</li>
+    <li>Cenniki, wyszukiwarka i inne informacje w serwisie nie stanowią oferty w rozumieniu Kodeksu cywilnego, lecz zaproszenie do zawarcia umowy. Ostateczną cenę i dostępność Sprzedawca potwierdza w ofercie i fakturze pro forma.</li>
+    <li>Dla każdego dostawcy obowiązuje minimalna wartość zamówienia podana przy jego ofercie w cenniku. Jeśli w cenniku podano liczbę sztuk w opakowaniu zbiorczym, zamówienie składa się na pełne opakowania zbiorcze.</li>
+    <li>Wszystkie produkty są nowe i oryginalne, pochodzą z legalnej dystrybucji na terenie Unii Europejskiej.</li>
+  </ol>
+  <h2>4. Zamówienie i zawarcie umowy</h2>
+  <ol>
+    <li>Kupujący składa zamówienie e-mailem na adres {SITE.email}, w szczególności w postaci pliku przygotowanego w wyszukiwarce lub cenniku.</li>
+    <li>Sprzedawca potwierdza dostępność i przesyła fakturę pro forma. Umowa sprzedaży zostaje zawarta z chwilą zaksięgowania wpłaty na rachunku Sprzedawcy.</li>
+    <li>Do czasu opłacenia faktury pro forma towar nie jest rezerwowany. Nieopłacona faktura pro forma wygasa po 7 dniach od jej wysłania.</li>
+  </ol>
+  <h2>5. Płatność</h2>
+  <p>Płatność następuje z góry, przelewem na rachunek wskazany na fakturze pro forma. Sprzedawca nigdy nie zmienia numeru rachunku w wiadomości e-mail.</p>
+  <h2>6. Anulowanie zamówienia</h2>
+  <p>Zamówienie można anulować e-mailem wyłącznie do chwili opłacenia faktury pro forma. Zamówienie opłacone, w całości lub w części, jest wiążące i nie może zostać anulowane, ponieważ po otrzymaniu płatności Sprzedawca niezwłocznie kupuje towar u dostawców.</p>
+  <h2>7. Realizacja i braki</h2>
+  <ol>
+    <li>Typowy czas realizacji wynosi 7-10 dni roboczych od zaksięgowania płatności. Czas realizacji dla poszczególnych dostawców i dystrybucji L'Oréal oraz Coty podany jest w cennikach.</li>
+    <li>Jeśli po opłaceniu zamówienia wystąpią braki u dostawcy, Sprzedawca realizuje zamówienie w dostępnych ilościach i niezwłocznie zwraca Kupującemu nadpłatę.</li>
+  </ol>
+  <h2>8. Dostawa</h2>
+  <p>Towar wysyłany jest kurierem lub paletą na adres wskazany przez Kupującego. Koszty dostawy podane są na stronie <a href="/dostawa/">Dostawa</a>. Każda przesyłka jest ubezpieczona.</p>
+  <h2>9. Odbiór, reklamacje i zwroty</h2>
+  <ol>
+    <li>Kupujący sprawdza przesyłkę w obecności przewoźnika. Uszkodzenia transportowe należy potwierdzić protokołem szkody i niezwłocznie zgłosić Sprzedawcy e-mailem ze zdjęciami.</li>
+    <li>Niezgodność ilościową z fakturą należy zgłosić e-mailem w ciągu 3 dni od dostawy.</li>
+    <li>Sprzedawca nie przyjmuje zwrotów towaru prawidłowo dostarczonego. Wyjątek stanowią produkty uszkodzone w transporcie, zgłoszone zgodnie z ust. 1.</li>
+    <li>Strony wyłączają odpowiedzialność Sprzedawcy z tytułu rękojmi w zakresie dopuszczalnym przez prawo, z zastrzeżeniem postanowień powyżej.</li>
+  </ol>
+  <h2>10. Dane osobowe</h2>
+  <p>Zasady przetwarzania danych opisuje <a href="/polityka-prywatnosci/">Polityka prywatności</a>.</p>
+  <h2>11. Postanowienia końcowe</h2>
+  <ol>
+    <li>W sprawach nieuregulowanych stosuje się przepisy prawa polskiego, w szczególności Kodeksu cywilnego.</li>
+    <li>Spory rozstrzyga sąd właściwy dla siedziby Sprzedawcy.</li>
+    <li>Sprzedawca może zmienić regulamin. Do zamówień opłaconych przed zmianą stosuje się regulamin w dotychczasowym brzmieniu.</li>
+  </ol>
+</Page>

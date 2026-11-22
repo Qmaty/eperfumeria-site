@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /b2b/dane/
+Disallow: /b2b/nl_dane/
+
+Sitemap: https://eperfumeria.eu/sitemap-index.xml

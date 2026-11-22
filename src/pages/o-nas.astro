@@ -1,0 +1,29 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../data/site';
+
+
+---
+<Page img="o-nas" imgAlt="Witryna ePerfumeria nocą" imgPos="45% 50%" title="O nas - hurtownia perfum i kosmetyków od 2009 r. | ePerfumeria" description="ePerfumeria to warszawska hurtownia perfum i kosmetyków działająca od 2009 r. Ponad 500 000 produktów od ponad 800 dostawców z Europy, wyłącznie dla firm." eyebrow="O nas" h1="Hurtowy dystrybutor perfum i kosmetyków od 2009 roku" lead="Od ponad 15 lat łączymy polskie firmy z najlepszymi dostawcami perfum i kosmetyków w Europie.">
+  <h2>Nasza historia</h2>
+  <p>ePerfumeria powstała w 2009 roku w Warszawie. Od początku mieliśmy jeden cel: dać firmom z branży kosmetycznej dostęp do cen i asortymentu, które wcześniej były zarezerwowane dla największych graczy na rynku.</p>
+  <p>Zaczynaliśmy od kilku zaufanych dostawców i wąskiej oferty perfum. Z roku na rok budowaliśmy kolejne relacje z hurtowniami i dystrybutorami w całej Europie. Dziś łączymy oferty ponad {SITE.suppliers} sprawdzonych partnerów w jeden katalog z ponad {SITE.products} produktów.</p>
+  <h2>Jak działamy</h2>
+  <p>Nie jesteśmy klasyczną hurtownią, która sprzedaje tylko to, co ma na półkach. Działamy jak jeden punkt dostępu do oferty setek europejskich dostawców:</p>
+  <ul>
+    <li><strong>Weryfikujemy dostawców.</strong> Każdą hurtownię sprawdzamy, zanim jej oferta trafi do katalogu.</li>
+    <li><strong>Łączymy oferty.</strong> Zamiast negocjować z kilkunastoma dostawcami w kilku językach, rozmawiasz z jednym opiekunem po polsku.</li>
+    <li><strong>Kompletujemy zamówienia.</strong> Towar zamawiamy pod konkretne zamówienie, sprawdzamy przed wysyłką i dostarczamy do Twojej firmy.</li>
+    <li><strong>Trzymamy niską marżę.</strong> Nie utrzymujemy drogich zapasów, automatyzujemy procesy i dzięki wolumenowi oferujemy ceny bliskie źródłu.</li>
+    <li><strong>Rozliczamy się uczciwie.</strong> Pracujemy na przedpłacie. Jeśli coś wyprzeda się u dostawcy, od razu zwracamy nadpłatę.</li>
+  </ul>
+  <h2>Nasze wartości</h2>
+  <h3>Lojalność wobec klientów</h3><p>Prowadzimy wyłącznie sprzedaż hurtową. Nie ma nas na Allegro, Amazonie ani innych marketplace'ach. Nie konkurujemy z firmami, które zaopatrujemy.</p>
+  <h3>Przejrzystość</h3><p>Nasze ceny są jawne i dostępne bez rejestracji. Każdy może policzyć marżę, zanim się z nami skontaktuje.</p>
+  <h3>Oryginalność bez kompromisów</h3><p>Sprzedajemy wyłącznie oryginalne produkty z dystrybucji w Unii Europejskiej, z pełną dokumentacją zakupową.</p>
+  <h3>Doświadczenie</h3><p>Znamy sezonowość branży, rotację marek i wiarygodność dostawców. Pomagamy dobrać asortyment i ominąć ryzyka.</p>
+  <h2>Dane firmy</h2>
+  <p><strong>{SITE.company}</strong><br />{SITE.street}, {SITE.zip} {SITE.city}<br />NIP {SITE.nip} · KRS {SITE.krs} · REGON {SITE.regon}</p>
+  <p>Klientom z innych krajów UE i spoza Unii oferujemy angielską wersję serwisu z cennikiem w euro: <a href={SITE.intl}>perfume-supplier.eu</a>.</p>
+  <div class="cta-box"><h3 style="margin-top:0;color:#fff">Sprawdź ceny hurtowe</h3><p style="margin:0 0 14px">Ponad {SITE.products} produktów z aktualnymi cenami netto, bez rejestracji i logowania.</p><a class="btn btn-gold" style="color:#fff" href={SITE.order}>Wyszukaj produkty i zamów</a></div>
+</Page>

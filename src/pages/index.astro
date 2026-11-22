@@ -1,0 +1,102 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site';
+---
+<Base title="Hurtownia perfum i kosmetyków B2B - ceny online bez rejestracji | ePerfumeria" description="Hurtownia oryginalnych perfum i kosmetyków dla firm od 2009 r. Ponad 500 000 produktów od ponad 800 dostawców z Europy, ceny netto online bez rejestracji. Dystrybucja L'Oréal i Coty, dostawa w całej Polsce.">
+<div class="hero">
+ <div class="txt">
+  <div class="eyebrow">Hurtownia perfum i kosmetyków · Warszawa</div>
+  <h1 class="serif">Oryginalne perfumy i kosmetyki w cenach prosto od źródła</h1>
+  <p class="lead">Jeden dostawca zamiast kilkudziesięciu: ponad {SITE.products} produktów od ponad {SITE.suppliers} sprawdzonych dystrybutorów z Europy, z cenami netto online i bez rejestracji. Sprzedajemy wyłącznie firmom, więc nigdy z Tobą nie konkurujemy.</p>
+  <div class="cta"><a class="btn btn-dark" href={SITE.order}>Sprawdź ceny</a><a class="btn btn-line" href={SITE.b2b}>Cenniki do pobrania</a></div>
+  <div class="note">Bez konta, logowania i pisania maili: wyszukaj produkty z aktualnymi cenami hurtowymi i samodzielnie przygotuj zamówienie.</div>
+ </div>
+ <div class="img"><img src="/img/hero.webp" srcset="/img/hero-700.webp 540w, /img/hero.webp 736w" sizes="(max-width:900px) 100vw, 50vw" alt="Złoty atomizer perfum z logo ePerfumeria i złotą mgiełką" style="object-position:50% 50%" width="736" height="768" fetchpriority="high" decoding="async" /></div>
+</div>
+
+<div class="stats"><div class="wrap">
+ <div class="stat"><b>{SITE.products}+</b><span>produktów w katalogu online</span></div>
+ <div class="stat"><b>{SITE.suppliers}+</b><span>sprawdzonych dostawców z UE</span></div>
+ <div class="stat"><b>od 2009</b><span>w hurtowym handlu perfumami</span></div>
+ <div class="stat"><b>7-10 dni</b><span>typowy czas dostawy</span></div>
+</div></div>
+
+<section class="live" aria-labelledby="live-h"><div class="wrap">
+ <div>
+  <div class="eyebrow">Hurt samoobsługowy</div>
+  <h2 id="live-h" class="serif">Sprawdź ceny i przygotuj zamówienie samodzielnie</h2>
+  <p style="color:var(--muted);margin:0 0 18px">Cała oferta hurtowa jest online z cenami. Nie musisz pisać do nas ani czekać na wycenę, żeby wiedzieć, ile zapłacisz.</p>
+  <ul>
+   <li>Aktualne ceny netto ponad {SITE.products} produktów, aktualizowane codziennie</li>
+   <li>Bez rejestracji, konta i logowania</li>
+   <li>Porównanie dostawców, minimalnych wartości zamówienia i czasu dostawy</li>
+   <li>Zamówienie pobierasz jako plik Excel i wysyłasz nam jednym mailem</li>
+  </ul>
+ </div>
+ <div class="box">
+  <div class="eyebrow">Zacznij tutaj</div>
+  <h3 class="serif" style="font-size:30px;margin:8px 0 6px">Wyszukaj w katalogu</h3>
+  <p style="color:var(--muted);font-size:15px;margin:0 0 8px">Po kodzie EAN, marce lub nazwie produktu. Wklej listę do 100 kodów EAN i wyceń całe zamówienie naraz.</p>
+  <a class="btn btn-dark" href={SITE.order}>Otwórz wyszukiwarkę i zamówienia</a>
+  <a class="btn btn-line" href={SITE.b2b}>Pobierz cenniki (Excel)</a>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="head"><div class="eyebrow">Nasza oferta hurtowa</div><h2 class="serif">Wszystko, czego potrzebują Twoje półki, od jednego partnera</h2><p>Bestsellery drogeryjne, perfumy selektywne i niszowe, testery oraz zestawy prezentowe, które napędzają sprzedaż w sezonie.</p></div>
+ <div class="cats">
+  <a class="cat" href="/perfumy-hurt/"><div class="img"><img src="/img/cat-perfumy.webp" srcset="/img/cat-perfumy-700.webp 700w, /img/cat-perfumy.webp 1376w" sizes="(max-width:900px) 50vw, 25vw" alt="Perfumy damskie i katalog hurtowy ePerfumeria" style="object-position:50% 50%" width="1376" height="768" loading="lazy" decoding="async" /></div><div class="t"><h3>Perfumy</h3><p>Perfumy damskie i męskie: marki popularne, selektywne i niszowe, testery, zestawy.</p></div></a>
+  <a class="cat" href="/makijaz/"><div class="img"><img src="/img/cat-makijaz.webp" srcset="/img/cat-makijaz-700.webp 700w, /img/cat-makijaz.webp 1376w" sizes="(max-width:900px) 50vw, 25vw" alt="Wizażystka nakłada cień do powiek" style="object-position:62% 50%" width="1376" height="768" loading="lazy" decoding="async" /></div><div class="t"><h3>Makijaż</h3><p>Podkłady, pomadki, tusze do rzęs i lakiery do paznokci wiodących marek.</p></div></a>
+  <a class="cat" href="/kosmetyki/"><div class="img"><img src="/img/cat-pielegnacja.webp" srcset="/img/cat-pielegnacja-700.webp 700w, /img/cat-pielegnacja.webp 1376w" sizes="(max-width:900px) 50vw, 25vw" alt="Dłoń prezentująca słoik kremu" style="object-position:55% 50%" width="1376" height="768" loading="lazy" decoding="async" /></div><div class="t"><h3>Pielęgnacja i włosy</h3><p>Pielęgnacja twarzy i ciała, ochrona przeciwsłoneczna, kosmetyki do włosów.</p></div></a>
+  <a class="cat" href="/zestawy-prezentowe-dla-firm/"><div class="img"><img src="/img/cat-zestawy.webp" srcset="/img/cat-zestawy-700.webp 700w, /img/cat-zestawy.webp 1376w" sizes="(max-width:900px) 50vw, 25vw" alt="Zestawy prezentowe perfum i kosmetyków" style="object-position:50% 70%" width="1376" height="768" loading="lazy" decoding="async" /></div><div class="t"><h3>Zestawy prezentowe</h3><p>Zestawy świąteczne i sezonowe oraz upominki dla pracowników i klientów.</p></div></a>
+ </div>
+</div></section>
+
+<section class="dist"><div class="wrap">
+ <div class="head"><div class="eyebrow">Oficjalna dystrybucja</div><h2 class="serif">Bezpośredni dostęp do dwóch największych koncernów kosmetycznych</h2><p>Stabilne ceny, regularne dostawy i polska dystrybucja z polskimi opisami na opakowaniach.</p></div>
+ <div class="grid">
+  <div class="dcard"><div class="eyebrow">Grupa L'Oréal</div><h3>L'Oréal Paris, Maybelline New York, Garnier, Mixa</h3><p>Makijaż, koloryzacja, pielęgnacja skóry i włosów: bestsellery z regularną dostępnością.</p><div class="brands"><span>L'Oréal Paris</span><span>Maybelline New York</span><span>Garnier</span><span>Mixa</span></div><a class="btn btn-dark" href={SITE.b2b}>Cennik L'Oréal</a></div>
+  <div class="dcard"><div class="eyebrow">Coty</div><h3>Bourjois, Rimmel, Max Factor, Sally Hansen i inne</h3><p>Kosmetyki kolorowe, pielęgnacja paznokci i popularne linie zapachowe.</p><div class="brands"><span>Bourjois</span><span>Rimmel London</span><span>Max Factor</span><span>Sally Hansen</span><span>Mexx</span><span>Adidas</span><span>Bruno Banani</span></div><a class="btn btn-dark" href={SITE.b2b}>Cennik Coty</a></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="head"><div class="eyebrow">Jak zamawiać</div><h2 class="serif">Od sprawdzenia ceny do dostawy w czterech krokach</h2></div>
+ <div class="steps">
+  <div class="step"><i>01</i><h3>Sprawdź ceny online</h3><p>Przeszukaj <a href={SITE.order}>cały katalog</a> z aktualnymi cenami hurtowymi. Bez konta i logowania.</p></div>
+  <div class="step"><i>02</i><h3>Przygotuj zamówienie</h3><p>Porównaj dostawców, sprawdź minimalną wartość zamówienia każdego z nich i pobierz zamówienie jako Excel.</p></div>
+  <div class="step"><i>03</i><h3>Otrzymaj potwierdzenie</h3><p>Potwierdzamy dostępność i wysyłamy fakturę pro forma.</p></div>
+  <div class="step"><i>04</i><h3>Odbierz towar</h3><p>Po zaksięgowaniu płatności kompletujemy, sprawdzamy i wysyłamy zamówienie, zwykle w 7-10 dni roboczych.</p></div>
+ </div>
+</div></section>
+
+<section style="background:var(--paper)"><div class="wrap why">
+ <div class="img"><img src="/img/magazyn.webp" srcset="/img/magazyn-700.webp 700w, /img/magazyn.webp 1376w" sizes="(max-width:900px) 100vw, 50vw" alt="Kartony z zamówieniami hurtowymi ePerfumeria gotowe do wysyłki" style="object-position:55% 50%" width="1376" height="768" loading="lazy" decoding="async" /></div>
+ <div>
+  <div class="eyebrow">Dlaczego sklepy wybierają ePerfumerię</div><h2 class="serif" style="font-size:44px;line-height:1.1;margin:12px 0 34px">Hurtownia, która dba o Twoją marżę</h2>
+  <div class="list">
+   <div><div class="rule"></div><h3>Nie sprzedajemy detalicznie</h3><p>Nie ma nas na Allegro, Amazonie ani marketplace'ach. Nie przejmujemy Twoich klientów i nie zaniżamy Twoich cen.</p></div>
+   <div><div class="rule"></div><h3>Jawne ceny</h3><p>Cała oferta z cenami online, bez rejestracji. Policz marżę, zanim do nas napiszesz.</p></div>
+   <div><div class="rule"></div><h3>Ceny blisko źródła</h3><p>Wieloletnie relacje i duże wolumeny u europejskich dystrybutorów utrzymują nasze ceny wśród najniższych.</p></div>
+   <div><div class="rule"></div><h3>Wyłącznie oryginały</h3><p>Tylko oryginalne produkty z legalnych, udokumentowanych źródeł w UE, z dokumentami do każdej dostawy.</p></div>
+   <div><div class="rule"></div><h3>Sprawna logistyka</h3><p>Towar zamawiamy pod Twoje zamówienie, sprawdzamy w Warszawie i wysyłamy w całej Polsce i UE.</p></div>
+   <div><div class="rule"></div><h3>17 lat doświadczenia</h3><p>Znamy dostawców, sezonowość i ryzyka. Pomagamy wybrać to, co naprawdę się sprzedaje.</p></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="aud"><div class="wrap">
+ <div class="head"><div class="eyebrow">Z kim współpracujemy</div><h2 class="serif">Wyłącznie klienci hurtowi</h2></div>
+ <div class="chips"><span>Hurtownie i dystrybutorzy</span><span>Perfumerie internetowe i stacjonarne</span><span>Drogerie i sklepy kosmetyczne</span><span>Salony fryzjerskie i kosmetyczne</span><span>Prezenty firmowe i programy lojalnościowe</span></div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="head"><div class="eyebrow">Warunki w skrócie</div><h2 class="serif">Proste, spisane, bez niespodzianek</h2></div>
+ <div class="band">
+  <div><b>MWZ</b><span>minimalna wartość zamówienia podana przy każdym dostawcy w cenniku</span></div>
+  <div><b>Netto</b><span>ceny netto, faktura VAT dla Twojej firmy</span></div>
+  <div><b>Dostawa</b><span>kurierem lub paletą w całej Polsce i UE</span></div>
+  <div><b>Do 3%</b><span>rabatu przy większych zamówieniach</span></div>
+ </div>
+</div></section>
+</Base>

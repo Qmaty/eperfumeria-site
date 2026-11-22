@@ -1,0 +1,8 @@
+---
+import { BRANDS } from '../data/site';
+const list = [...BRANDS, ...BRANDS];
+---
+<section class="brands-band" aria-label="Wybrane marki z naszej oferty">
+  <div class="wrap brands-head"><span class="eyebrow">Wybrane marki z cennika</span></div>
+  <div class="marquee"><div class="track">{list.map((b, i) => <span aria-hidden={i >= BRANDS.length ? 'true' : undefined}>{b}</span>)}</div></div>
+</section>

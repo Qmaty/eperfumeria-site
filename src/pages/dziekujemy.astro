@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site';
+---
+<Base title="Dziękujemy | ePerfumeria" description="Dziękujemy za wiadomość. Odpowiemy najszybciej, jak to możliwe." noindex>
+  <div class="ty">
+    <img src="/img/dziekujemy.webp" srcset="/img/dziekujemy-700.webp 700w, /img/dziekujemy.webp 1376w" sizes="(max-width:980px) 100vw, 930px" alt="Dziękujemy! Otrzymaliśmy Twoje zapytanie, prześlemy ofertę jak najszybciej." width="1376" height="768" fetchpriority="high" />
+    <p style="color:var(--muted);font-size:18px;margin:0 0 26px">Odpowiadamy w dni robocze, zwykle w ciągu kilku godzin. W międzyczasie możesz sam sprawdzić nasze ceny hurtowe.</p>
+    <div class="cta"><a class="btn btn-dark" href={SITE.order}>Sprawdź ceny</a><a class="btn btn-line" href="/">Strona główna</a></div>
+  </div>
+</Base>

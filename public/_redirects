@@ -1,0 +1,27 @@
+# Przekierowania 301 ze starej strony WordPress eperfumeria.eu
+/thank-you/ /dziekujemy/ 301
+/swiateczne-zestawy-prezentowe-kosmetykow-dla-twoich-pracownikow-lub-klientow-tylko-hurt/ /zestawy-prezentowe-dla-firm/ 301
+/zestaw-prezentowy-dla-klientow-z-perfum-i-kosmetykow/ /zestawy-prezentowe-dla-firm/ 301
+/zestawy-prezentowe-kosmetykow-dla-klientow-firmy/ /zestawy-prezentowe-dla-firm/ 301
+/zestawy-prezentowe-dla-pracownikow-i-klientow/ /zestawy-prezentowe-dla-firm/ 301
+/perfumy/ /perfumy-hurt/ 301
+/perfumy-damskie/ /perfumy-hurt/ 301
+/perfumy-dla-mezczyzn/ /perfumy-hurt/ 301
+/pielegnacja/ /kosmetyki/ 301
+/https-eperfumeria-eu-perfumeria-internetowa-mezczyzna/ /kosmetyki/ 301
+/dom-i/ / 301
+/marki/ /cennik/ 301
+/bok-biuro-obslugi-klienta/ /wspolpraca/ 301
+/bok/ /wspolpraca/ 301
+/sklep/ / 301
+/koszyk/ / 301
+/zamowienie/ / 301
+/moje-konto/ / 301
+/feed/ /poradnik/ 301
+/blog/ /poradnik/ 301
+/sitemap_index.xml /sitemap-index.xml 301
+/produkt/* /cennik/ 301
+/kategoria-produktu/* /cennik/ 301
+/category/* /poradnik/ 301
+/tag/* / 301
+/author/* / 301

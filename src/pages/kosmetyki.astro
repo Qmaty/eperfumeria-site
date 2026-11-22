@@ -1,0 +1,12 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../data/site';
+
+---
+<Page img="mezczyzni" imgAlt="Kosmetyki męskie ePerfumeria" imgPos="50% 50%" title="Kosmetyki hurt - pielęgnacja twarzy, ciała i włosów | ePerfumeria" description="Hurtownia kosmetyków: pielęgnacja twarzy i ciała, ochrona przeciwsłoneczna, kosmetyki do włosów i dla mężczyzn. Oryginalne marki, ceny netto online." eyebrow="Kosmetyki hurtowo" h1="Kosmetyki do pielęgnacji w hurcie" lead="Pielęgnacja twarzy, ciała i włosów oraz kosmetyki męskie od sprawdzonych dostawców z Europy.">
+  <p>Oferujemy kosmetyki pielęgnacyjne od marek aptecznych i drogeryjnych po linie luksusowe. W ramach naszej dystrybucji dostarczamy też pełną gamę Garnier i Mixa z polskimi opisami.</p>
+  <h2>Kategorie</h2>
+  <ul><li>pielęgnacja twarzy: kremy, serum, toniki, maseczki,</li><li>pielęgnacja ciała: balsamy, żele pod prysznic, peelingi,</li><li>ochrona przeciwsłoneczna,</li><li>kosmetyki do włosów: szampony, odżywki, koloryzacja, stylizacja,</li><li>kosmetyki dla mężczyzn i do golenia,</li><li>higiena jamy ustnej i kosmetyki codziennego użytku.</li></ul>
+  <p>Prowadzisz salon? Zobacz też <a href="/hurtownia-fryzjerska/">kosmetyki fryzjerskie</a>.</p>
+  <div class="cta-box"><h3 style="margin-top:0;color:#fff">Sprawdź ceny hurtowe</h3><p style="margin:0 0 14px">Ponad {SITE.products} produktów z aktualnymi cenami netto, bez rejestracji i logowania.</p><a class="btn btn-gold" style="color:#fff" href={SITE.order}>Wyszukaj produkty i zamów</a></div>
+</Page>

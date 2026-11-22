@@ -1,0 +1,27 @@
+---
+import { SITE } from '../data/site';
+interface Props { topic?: string; placeholder?: string }
+const { topic = '', placeholder = 'Produkty, marki, ilości lub pytania o współpracę' } = Astro.props;
+---
+<div class="form-err" id="form-err" role="alert" hidden></div>
+<form class="cform" method="post" action="/b2b/kontakt.php">
+  <label>Imię i nazwisko *<input name="name" required maxlength="120" autocomplete="name" /></label>
+  <label>Firma *<input name="company" required maxlength="160" autocomplete="organization" /></label>
+  <label>E-mail *<input name="email" type="email" required maxlength="160" autocomplete="email" /></label>
+  <label>Telefon<input name="phone" type="tel" maxlength="60" autocomplete="tel" /></label>
+  <label>Miasto<input name="country" maxlength="80" autocomplete="address-level2" /></label>
+  <label>NIP<input name="vat" maxlength="40" placeholder="np. 5252457256" /></label>
+  <label class="full">Wiadomość *<textarea name="message" required rows="6" maxlength="5000" placeholder={placeholder}>{topic}</textarea></label>
+  <label class="hp" aria-hidden="true">Strona<input name="website" tabindex="-1" autocomplete="off" /></label>
+  <input type="hidden" name="ts" class="ts" value="0" />
+  <label class="full chk"><input type="checkbox" name="consent" value="1" required /> <span>Zgadzam się na przetwarzanie moich danych przez {SITE.company} w celu odpowiedzi na tę wiadomość, zgodnie z <a href="/polityka-prywatnosci/">Polityką prywatności</a>. *</span></label>
+  <div class="full"><button class="btn btn-dark" type="submit">Wyślij wiadomość</button> <span class="hint">Odpowiadamy w dni robocze, zwykle w ciągu kilku godzin.</span></div>
+</form>
+<script is:inline>
+  document.querySelectorAll('.cform .ts').forEach(function (e) { e.value = Date.now(); });
+  (function () {
+    var e = new URLSearchParams(location.search).get('error'); if (!e) return;
+    var m = { missing: 'Uzupełnij wymagane pola i zaznacz zgodę.', email: 'Podaj poprawny adres e-mail.', limit: 'Zbyt wiele wiadomości z Twojego połączenia. Spróbuj później lub napisz bezpośrednio na info@eperfumeria.eu.', send: 'Nie udało się wysłać wiadomości. Napisz do nas na info@eperfumeria.eu.', spam: 'Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę.' };
+    var b = document.getElementById('form-err'); if (b) { b.textContent = m[e] || m.send; b.hidden = false; }
+  })();
+</script>

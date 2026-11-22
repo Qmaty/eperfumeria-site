@@ -1,0 +1,49 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../data/site';
+
+
+---
+<Page img="wspolpraca" imgAlt="Linia kosmetyków męskich ePerfumeria w showroomie" imgPos="50% 50%" title="Współpraca hurtowa - zasady zamówień B2B | ePerfumeria" description="Zasady współpracy z hurtownią perfum i kosmetyków ePerfumeria: dla kogo, jak złożyć zamówienie, płatność, dostawa, braki, reklamacje i anulowanie." eyebrow="Współpraca" h1="Zasady współpracy hurtowej" lead="Sprzedajemy wyłącznie firmom. Tu znajdziesz wszystkie zasady: dla kogo jest oferta, jak zamawiać i co obowiązuje po dostawie.">
+  <h2>Dla kogo jest nasza oferta</h2>
+  <p>Sprzedajemy wyłącznie w modelu B2B, czyli firmom, na podstawie numeru NIP, i wyłącznie na własny magazyn kupującego. Z naszej oferty korzystają:</p>
+  <ul>
+    <li>hurtownie i dystrybutorzy perfum oraz kosmetyków,</li>
+    <li>perfumerie internetowe i sklepy e-commerce,</li>
+    <li>perfumerie, drogerie i sklepy stacjonarne,</li>
+    <li>salony fryzjerskie i kosmetyczne,</li>
+    <li>sieci handlowe i sklepy wielobranżowe,</li>
+    <li>firmy kupujące perfumy i kosmetyki na <a href="/zestawy-prezentowe-dla-firm/">prezenty dla pracowników i klientów</a>,</li>
+    <li>eksporterzy na rynki poza UE.</li>
+  </ul>
+  <p><strong>Nie prowadzimy dropshippingu</strong> (od 2025 r.) i nie wysyłamy towaru do klientów końcowych naszych klientów. Każde zamówienie kompletujemy specjalnie dla Ciebie, dlatego realizujemy wyłącznie zakupy na Twój magazyn lub do Twojego sklepu.</p>
+  <h2>Dwa rodzaje zamówień</h2>
+  <h3>1. Oferta europejskich dostawców</h3>
+  <p>Ponad {SITE.products} produktów od ponad {SITE.suppliers} dostawców: perfumy (marki popularne, selektywne i niszowe), kosmetyki kolorowe, pielęgnacja, kosmetyki do włosów, zestawy prezentowe i testery. Każdy dostawca ma własną minimalną wartość zamówienia, podaną przy jego ofercie w cenniku. Typowy czas realizacji to 7-10 dni roboczych od zaksięgowania płatności.</p>
+  <h3>2. Dystrybucja L'Oréal i Coty</h3>
+  <p>Pełna gama produktów z polskiej dystrybucji, z polskimi opisami na opakowaniach:</p>
+  <ul><li>Grupa L'Oréal: L'Oréal Paris, Maybelline New York, Garnier, Mixa,</li><li>Grupa Coty: Bourjois, Rimmel London, Max Factor, Mexx, Sally Hansen, Adidas, Bruno Banani.</li></ul>
+  <p>Minimalna wartość zamówienia i czas realizacji są podane w cennikach L'Oréal i Coty.</p>
+  <h2>Jak złożyć zamówienie</h2>
+  <ol>
+    <li><strong>Sprawdź ceny</strong> w <a href={SITE.order}>wyszukiwarce online</a> albo pobierz <a href={SITE.b2b}>cennik Excel</a>. Bez rejestracji.</li>
+    <li><strong>Przygotuj zamówienie</strong>: w wyszukiwarce dodajesz produkty i pobierasz gotowy plik Excel, a w cenniku wpisujesz ilości przy wybranych produktach.</li>
+    <li><strong>Wyślij zamówienie</strong> na <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</li>
+    <li><strong>Otrzymaj potwierdzenie i fakturę pro forma.</strong> Sprawdzamy dostępność u dostawców. Jeśli u któregoś dostawcy zamówienie nie osiąga minimalnej wartości, przesyłamy jego pełną ofertę do uzupełnienia.</li>
+    <li><strong>Opłać pro formę.</strong> Po zaksięgowaniu płatności zamawiamy towar u dostawców.</li>
+    <li><strong>Odbierz dostawę.</strong> Wysyłamy na adres podany w zamówieniu, w Polsce i UE. Fakturę VAT przesyłamy e-mailem.</li>
+  </ol>
+  <h2>Warunki zamówień</h2>
+  <h3>Anulowanie zamówienia</h3>
+  <p>Zamówienie można anulować e-mailem tylko do momentu opłacenia faktury pro forma. Zamówienie opłacone, w całości lub w części, jest wiążące i nie może zostać anulowane, ponieważ zaraz po otrzymaniu płatności kupujemy towar u dostawców. Nieopłacona pro forma wygasa po 7 dniach.</p>
+  <h3>Braki u dostawcy</h3>
+  <p>Do czasu opłacenia pro formy towar nie jest rezerwowany. Jeśli po opłaceniu zamówienia wystąpią braki u dostawcy, realizujemy je w dostępnych ilościach, a nadpłatę niezwłocznie zwracamy. Płacisz tylko za towar, który faktycznie otrzymasz.</p>
+  <h3>Reklamacje ilościowe</h3>
+  <p>Niezgodność dostarczonych ilości z fakturą prosimy zgłaszać e-mailem w ciągu 3 dni od dostawy.</p>
+  <h3>Zwroty</h3>
+  <p>W transakcjach B2B nie obowiązują przepisy o zwrotach konsumenckich, dlatego nie przyjmujemy zwrotów towaru po wysyłce. Wyjątek stanowią produkty uszkodzone w transporcie, jeśli uszkodzenie stwierdzono w obecności przewoźnika.</p>
+  <h3>Uszkodzona przesyłka</h3>
+  <p>Każda przesyłka jest ubezpieczona. Sprawdź paczkę przy kurierze, a w razie uszkodzenia spisz protokół i napisz do nas ze zdjęciami. Reklamację u przewoźnika zgłosimy w Twoim imieniu.</p>
+  <p>Pełne zasady opisuje <a href="/regulamin/">Regulamin</a>.</p>
+  <div class="cta-box"><h3 style="margin-top:0;color:#fff">Sprawdź ceny hurtowe</h3><p style="margin:0 0 14px">Ponad {SITE.products} produktów z aktualnymi cenami netto, bez rejestracji i logowania.</p><a class="btn btn-gold" style="color:#fff" href={SITE.order}>Wyszukaj produkty i zamów</a></div>
+</Page>

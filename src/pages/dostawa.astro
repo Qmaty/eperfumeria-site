@@ -1,0 +1,21 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../data/site';
+
+
+---
+<Page img="dostawa" imgAlt="Samochód dostawczy ePerfumeria" imgPos="30% 50%" title="Dostawa hurtowych zamówień perfum i kosmetyków | ePerfumeria" description="Dostawa zamówień hurtowych perfum i kosmetyków kurierem lub paletą w całej Polsce i UE. Koszty wysyłki, czas realizacji i ubezpieczenie przesyłek." eyebrow="Dostawa" h1="Dostawa w całej Polsce i UE" lead="Zamówienia wysyłamy kurierem lub paletą. Każda przesyłka jest ubezpieczona.">
+  <h2>Koszt wysyłki w Polsce</h2>
+  <table><tr><th>Rodzaj przesyłki</th><th>Koszt netto</th></tr><tr><td>Paczka do 30 kg</td><td>20 zł</td></tr><tr><td>Paleta</td><td>150 zł</td></tr></table>
+  <p>Wysyłki do innych krajów UE wyceniamy indywidualnie. Ceny w cenniku są cenami netto z magazynu w Warszawie.</p>
+  <h2>Czas realizacji</h2>
+  <p>Oferta europejskich dostawców: zwykle 7-10 dni roboczych od zaksięgowania płatności. Czas dostawy każdego dostawcy jest podany w cenniku i na stronie zamówień. Zamówienia z dystrybucji L'Oréal i Coty realizujemy w czasie podanym w ich cennikach.</p>
+  <h2>Odbiór przesyłki</h2>
+  <ul>
+    <li>Sprawdź paczkę lub paletę w obecności kuriera.</li>
+    <li>Jeśli opakowanie jest uszkodzone, spisz protokół szkody z kurierem i zrób zdjęcia.</li>
+    <li>Napisz do nas na <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. Reklamację u przewoźnika zgłosimy w Twoim imieniu.</li>
+    <li>Niezgodności ilościowe zgłoś w ciągu 3 dni od dostawy.</li>
+  </ul>
+  <div class="cta-box"><h3 style="margin-top:0;color:#fff">Sprawdź ceny hurtowe</h3><p style="margin:0 0 14px">Ponad {SITE.products} produktów z aktualnymi cenami netto, bez rejestracji i logowania.</p><a class="btn btn-gold" style="color:#fff" href={SITE.order}>Wyszukaj produkty i zamów</a></div>
+</Page>

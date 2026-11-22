@@ -1,0 +1,36 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../data/site';
+
+
+---
+<Page img="cennik" imgAlt="Zestaw kosmetyków w kremowym pudełku ePerfumeria" imgPos="50% 50%" title="Cennik hurtowy perfum i kosmetyków bez rejestracji | ePerfumeria" description="Cennik hurtowy perfum i kosmetyków do pobrania bez rejestracji (Excel) lub online z wyszukiwarką. Ponad 500 000 produktów, ceny netto aktualizowane codziennie." eyebrow="Cennik" h1="Cennik hurtowy bez rejestracji i logowania" lead="Dwa sposoby na sprawdzenie cen: wyszukiwarka online albo cenniki Excel do pobrania. Oba aktualizujemy codziennie.">
+  <div class="cards" style="grid-template-columns:1fr 1fr">
+    <a class="card" href={SITE.order}><div class="eyebrow">Online · polecane</div><h3>Wyszukaj i zamów online</h3><p>Szukaj wśród ponad {SITE.products} produktów po EAN, marce lub nazwie, porównuj dostawców i ich minimalne wartości zamówienia, przygotuj zamówienie. Wklej do 100 kodów EAN naraz.</p></a>
+    <a class="card" href={SITE.b2b}><div class="eyebrow">Excel</div><h3>Pobierz cenniki</h3><p>Perfumy, kosmetyki, włosy i pozostałe kategorie oraz osobne cenniki dystrybucji L'Oréal i Coty.</p></a>
+  </div>
+  <p>Uważamy, że w handlu B2B cena nie powinna być tajemnicą. Nasze cenniki może pobrać każdy, w dowolnej chwili. Marżę na konkretnych produktach policzysz, zanim do nas napiszesz.</p>
+  <h2>Co zawiera cennik</h2>
+  <ul>
+    <li>kod EAN, nazwę produktu, markę i kategorię,</li>
+    <li>hurtową cenę netto w PLN,</li>
+    <li>minimalną wartość zamówienia (MWZ) danego dostawcy, stan, wielkość opakowania zbiorczego i czas dostawy,</li>
+    <li>zdjęcia produktów (online).</li>
+  </ul>
+  <h2>Warunki handlowe</h2>
+  <table>
+    <tr><th>Minimalna wartość zamówienia</th><td>osobna dla każdego dostawcy, podana przy jego ofercie w cenniku i na stronie zamówień</td></tr>
+    <tr><th>Opakowania zbiorcze</th><td>jeśli w cenniku podano liczbę sztuk w opakowaniu zbiorczym, zamawiasz pełne kartony</td></tr>
+    <tr><th>Czas realizacji</th><td>zwykle 7-10 dni roboczych, dla dystrybucji L'Oréal i Coty dłużej (podany w cenniku)</td></tr>
+    <tr><th>Płatność</th><td>przedpłata na podstawie faktury pro forma</td></tr>
+    <tr><th>Pochodzenie towaru</th><td>wyłącznie oryginalne produkty z dystrybucji w UE</td></tr>
+  </table>
+  <h2>Rabaty za wartość zamówienia</h2>
+  <table><tr><th>Wartość zamówienia netto</th><th>Rabat</th></tr><tr><td>od 10 000 zł</td><td>1%</td></tr><tr><td>od 20 000 zł</td><td>2%</td></tr><tr><td>od 30 000 zł</td><td>3%</td></tr></table>
+  <h2>Najczęstsze pytania</h2>
+  <h3>Czy muszę się rejestrować, żeby zobaczyć ceny?</h3><p>Nie. Wyszukiwarka i wszystkie cenniki są dostępne bez rejestracji i logowania.</p>
+  <h3>Co oznacza minimalna wartość zamówienia przy dostawcy?</h3><p>Nasz katalog łączy oferty ponad {SITE.suppliers} dostawców. Każdy z nich ma własny próg zamówienia, widoczny przy jego ofertach. Jeśli u któregoś dostawcy zabraknie do progu, prześlemy jego pełną ofertę, żeby łatwo było dobrać produkty.</p>
+  <h3>Jak często aktualizujecie ceny?</h3><p>Codziennie. Ostateczną cenę i dostępność potwierdzamy w ofercie przed wystawieniem faktury pro forma.</p>
+  <h3>Szukam produktu, którego nie ma w cenniku.</h3><p>Prześlij nazwę, kod EAN i ilość na <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. Sprawdzimy dostępność u dostawców lub u producenta.</p>
+  <div class="cta-box"><h3 style="margin-top:0;color:#fff">Sprawdź ceny hurtowe</h3><p style="margin:0 0 14px">Ponad {SITE.products} produktów z aktualnymi cenami netto, bez rejestracji i logowania.</p><a class="btn btn-gold" style="color:#fff" href={SITE.order}>Wyszukaj produkty i zamów</a></div>
+</Page>

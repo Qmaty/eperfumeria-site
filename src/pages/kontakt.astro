@@ -1,0 +1,21 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../data/site';
+import ContactForm from '../components/ContactForm.astro';
+
+---
+<Page img="kontakt" imgAlt="Showroom ePerfumeria z kartonami zamówień" imgPos="50% 50%" title="Kontakt - hurtownia perfum i kosmetyków | ePerfumeria" description="Kontakt z hurtownią perfum i kosmetyków ePerfumeria w Warszawie: e-mail, telefon, formularz, dane firmy i rachunek bankowy." eyebrow="Kontakt" h1="Porozmawiajmy o Twoim zamówieniu" lead="Wyślij zamówienie lub pytanie. Odpowiadamy w dni robocze, zwykle w ciągu kilku godzin.">
+  <div class="cards" style="grid-template-columns:1fr 1fr;margin-bottom:30px">
+    <a class="card" href={`mailto:${SITE.email}`}><div class="eyebrow">E-mail</div><h3>{SITE.email}</h3><p>Zamówienia, wyceny i pytania</p></a>
+    <a class="card" href={`tel:${SITE.phoneHref}`}><div class="eyebrow">Telefon</div><h3>{SITE.phone}</h3><p>Poniedziałek-piątek, 9:00-17:00</p></a>
+  </div>
+  <p><strong>Chcesz najpierw zobaczyć ceny?</strong> Nie musisz do nas pisać: <a href={SITE.order}>wyszukaj produkty z aktualnymi cenami hurtowymi</a>, bez konta i logowania, i wyślij nam zamówienie jako plik Excel.</p>
+  <h2 id="form">Napisz do nas</h2>
+  <ContactForm />
+  <h2>Dane firmy</h2>
+  <p><strong>{SITE.company}</strong><br />{SITE.street}, {SITE.zip} {SITE.city}<br />NIP {SITE.nip} · KRS {SITE.krs} · REGON {SITE.regon}</p>
+  <h2>Rachunek bankowy</h2>
+  <p>PKO BP: 51 1020 1127 0000 1102 0454 1256</p>
+  <p style="font-size:14px;color:var(--muted)">Płać zawsze na podstawie naszej faktury pro forma. Nigdy nie zmieniamy numeru rachunku w wiadomości e-mail.</p>
+
+</Page>

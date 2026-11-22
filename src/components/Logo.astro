@@ -1,0 +1,11 @@
+---
+const { id = 'lg' } = Astro.props;
+---
+<svg viewBox="200 225 740 445" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="mark">
+  <defs><linearGradient id={id} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cfae7a"/><stop offset="1" stop-color="#8f6a3a"/></linearGradient></defs>
+  <g fill={`url(#${id})`}>
+    <path d="M218,405 C300,355 400,365 460,435 L562,606 C480,655 365,650 318,575 Z"/>
+    <path d="M582,236 C650,300 685,380 662,455 C650,495 615,530 583,560 C550,530 515,495 503,455 C482,380 515,300 582,236 Z"/>
+    <path d="M920,405 C838,355 738,365 678,435 L576,606 C658,655 773,650 820,575 Z"/>
+  </g>
+</svg>

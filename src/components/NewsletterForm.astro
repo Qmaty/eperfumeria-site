@@ -1,0 +1,21 @@
+---
+import { SITE } from '../data/site';
+interface Props { variant?: 'band' | 'page'; source?: string }
+const { variant = 'band', source = 'band' } = Astro.props;
+const id = 'nl-' + variant;
+---
+<form class={`nlform nl-${variant}`} method="post" action="/b2b/newsletter.php" id={id}>
+  <div class="nl-row">
+    <label class="sr" for={`${id}-email`}>Firmowy e-mail</label>
+    <input id={`${id}-email`} name="email" type="email" required maxlength="160" placeholder="Twój firmowy e-mail" autocomplete="email" />
+    {variant === 'page' && <><label class="sr" for={`${id}-company`}>Firma</label><input id={`${id}-company`} name="company" maxlength="160" placeholder="Nazwa firmy" autocomplete="organization" /><label class="sr" for={`${id}-country`}>Miasto</label><input id={`${id}-country`} name="country" maxlength="80" placeholder="Miasto" autocomplete="address-level2" /></>}
+    <button class="btn btn-gold" type="submit">Zapisz się</button>
+  </div>
+  <label class="nl-chk"><input type="checkbox" name="consent" value="1" required /> <span>Zgadzam się na otrzymywanie newslettera ePerfumeria ({SITE.company}) e-mailem. Mogę się wypisać w każdej chwili (<a href="/polityka-prywatnosci/">Polityka prywatności</a>).</span></label>
+  <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+  <input type="hidden" name="ts" value="0" />
+  <input type="hidden" name="source" value={source} />
+</form>
+<script is:inline define:vars={{ id }}>
+  var f = document.getElementById(id); if (f) f.ts.value = Date.now();
+</script>

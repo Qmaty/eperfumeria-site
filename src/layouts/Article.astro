@@ -1,0 +1,14 @@
+---
+import Page from './Page.astro';
+import { SITE } from '../data/site';
+const { frontmatter } = Astro.props;
+const ld = { '@context': 'https://schema.org', '@type': 'Article', headline: frontmatter.h1 || frontmatter.title, datePublished: frontmatter.date, dateModified: frontmatter.updated || frontmatter.date, author: { '@type': 'Organization', name: SITE.name }, publisher: { '@type': 'Organization', name: SITE.name } };
+---
+<Page img={frontmatter.img} imgAlt={frontmatter.imgAlt} title={frontmatter.title} description={frontmatter.description} eyebrow="Poradnik hurtowy" h1={frontmatter.h1 || frontmatter.title} lead={frontmatter.lead} jsonld={ld} type="article">
+  <slot />
+  <div class="cta-box">
+    <h3 style="margin-top:0;color:#fff">Sprawdź nasze ceny hurtowe</h3>
+    <p style="margin:0 0 14px">Ponad {SITE.products} produktów z aktualnymi cenami netto, bez rejestracji i logowania. Złóż zamówienie i wyślij je jako plik Excel.</p>
+    <a class="btn btn-gold" style="color:#fff" href={SITE.order}>Sprawdź ceny</a>
+  </div>
+</Page>

@@ -1,0 +1,13 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../data/site';
+
+---
+<Page img="perfumy-meskie" imgAlt="Perfumy męskie w hurtowni ePerfumeria" imgPos="50% 50%" title="Perfumy hurt - hurtownia perfum oryginalnych | ePerfumeria" description="Hurtownia perfum oryginalnych: perfumy damskie i męskie, selektywne, niszowe i arabskie, testery i zestawy. Ceny netto online bez rejestracji." eyebrow="Perfumy hurtowo" h1="Hurtownia perfum oryginalnych" lead="Perfumy damskie i męskie od ponad 800 europejskich dostawców, w cenach hurtowych.">
+  <p>W naszym katalogu znajdziesz perfumy marek popularnych, selektywnych i niszowych, perfumy arabskie, testery oraz zestawy zapachowe. Wszystkie produkty pochodzą z oficjalnej dystrybucji w Unii Europejskiej.</p>
+  <h2>Co oferujemy</h2>
+  <ul><li>wody perfumowane, toaletowe i kolońskie, ekstrakty perfum,</li><li>perfumy damskie, męskie i unisex,</li><li>marki selektywne: Chanel, Dior, Yves Saint Laurent, Lancôme, Giorgio Armani, Paco Rabanne, Hugo Boss i wiele innych,</li><li>perfumy arabskie, m.in. Lattafa,</li><li>testery, miniatury i zestawy prezentowe,</li><li>mgiełki i dezodoranty perfumowane.</li></ul>
+  <h2>Jak sprawdzić ceny perfum</h2>
+  <p>Wpisz w <a href={SITE.order}>wyszukiwarce</a> markę, nazwę zapachu lub kod EAN. Przy każdym produkcie zobaczysz oferty dostawców: cenę netto, minimalną wartość zamówienia, stan i czas dostawy. Możesz też pobrać <a href={SITE.b2b}>cennik perfum w Excelu</a>.</p>
+  <div class="cta-box"><h3 style="margin-top:0;color:#fff">Sprawdź ceny hurtowe</h3><p style="margin:0 0 14px">Ponad {SITE.products} produktów z aktualnymi cenami netto, bez rejestracji i logowania.</p><a class="btn btn-gold" style="color:#fff" href={SITE.order}>Wyszukaj produkty i zamów</a></div>
+</Page>

@@ -1,0 +1,104 @@
+---
+import '@fontsource/comfortaa/700.css';
+import '@fontsource/cormorant-garamond/500.css';
+import '@fontsource/cormorant-garamond/600.css';
+import '@fontsource/jost/300.css';
+import '@fontsource/jost/400.css';
+import '@fontsource/jost/500.css';
+import '@fontsource/jost/600.css';
+import '../styles/global.css';
+import Logo from '../components/Logo.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
+import Brands from '../components/Brands.astro';
+import { SITE, NAV } from '../data/site';
+
+interface Props { title: string; description: string; image?: string; type?: string; noindex?: boolean; jsonld?: object }
+const { title, description, image = '/og-default.jpg', type = 'website', noindex = false, jsonld } = Astro.props;
+const canonical = new URL(Astro.url.pathname, SITE.url).href;
+const path = Astro.url.pathname;
+const showNl = !['/newsletter/', '/dziekujemy/', '/404/', '/404.html'].includes(path);
+const org = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE.name,
+  legalName: SITE.company,
+  url: SITE.url,
+  logo: SITE.url + '/favicon.svg',
+  email: SITE.email,
+  telephone: SITE.phone,
+  foundingDate: String(SITE.since),
+  vatID: SITE.vat,
+  address: { '@type': 'PostalAddress', streetAddress: SITE.street, postalCode: SITE.zip, addressLocality: SITE.city, addressCountry: 'PL' },
+  sameAs: [SITE.intl],
+};
+---
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  {noindex && <meta name="robots" content="noindex,follow" />}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content={type} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={new URL(image, SITE.url).href} />
+  <meta property="og:site_name" content={SITE.name} />
+  <meta property="og:locale" content="pl_PL" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json" set:html={JSON.stringify(org)} />
+  {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
+</head>
+<body>
+  <a class="skip" href="#main">Przejdź do treści</a>
+  <div class="top"><div class="wrap"><span>Tylko B2B · Hurtownia perfum i kosmetyków od {SITE.since} r.</span><span><a href="/newsletter/">Newsletter</a> · <a href={`mailto:${SITE.email}`}>{SITE.email}</a> · <a href={`tel:${SITE.phoneHref}`}>{SITE.phone}</a></span></div></div>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="/" aria-label="ePerfumeria - strona główna"><Logo /><span><b class="wm wm-ep">ePerfumeria</b><small>Hurtownia · Warszawa · od {SITE.since}</small></span></a>
+      <nav aria-label="Menu główne">
+        {NAV.map((n) => <a href={n.href} class={n.highlight ? 'hl' : ''} aria-current={path === n.href ? 'page' : undefined}>{n.label}</a>)}
+      </nav>
+      <select class="lang" aria-label="Język" onchange="if(this.value)location.href=this.value"><option value="/">PL</option><option value={SITE.intl}>EN</option></select>
+      <button class="menu-btn" aria-expanded="false" aria-controls="mnav" onclick="const m=document.getElementById('mnav');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))">Menu</button>
+    </div>
+    <div class="mobile-nav" id="mnav">{NAV.map((n) => <a href={n.href}>{n.label}</a>)}</div>
+  </header>
+  <main id="main"><slot /></main>
+  <Brands />
+  {showNl && <section class="nlband" aria-labelledby="nlband-h"><div class="wrap">
+    <div class="nl-txt"><div class="eyebrow">Newsletter dla firm</div><h2 id="nlband-h" class="serif">Okazje hurtowe przed innymi</h2><p>Obniżki cen, towar z krótszą datą, nowe marki i świeże cenniki. Najwyżej jeden e-mail w tygodniu.</p></div>
+    <NewsletterForm variant="band" source={path} />
+  </div></section>}
+  <footer><div class="wrap">
+    <div class="cols">
+      <div><h4>ePerfumeria</h4>{SITE.company}<br />{SITE.street}, {SITE.zip} {SITE.city}<br />NIP: {SITE.nip} · KRS: {SITE.krs}<br /><br /><a href={`mailto:${SITE.email}`}>{SITE.email}</a><a href={`tel:${SITE.phoneHref}`}>{SITE.phone}</a></div>
+      <div><h4>Hurt</h4><a href={SITE.order}>Wyszukaj ceny i zamów</a><a href={SITE.b2b}>Cennik online</a><a href="/cennik/">Cenniki do pobrania</a><a href="/zestawy-prezentowe-dla-firm/">Zestawy prezentowe dla firm</a><a href="/dostawa/">Dostawa</a></div>
+      <div><h4>Firma</h4><a href="/o-nas/">O nas</a><a href="/wspolpraca/">Zasady współpracy</a><a href="/poradnik/">Poradnik</a><a href="/kontakt/">Kontakt</a><a href={SITE.intl}>English / export: perfume-supplier.eu</a></div>
+      <div><h4>Informacje</h4><a href="/regulamin/">Regulamin</a><a href="/polityka-prywatnosci/">Polityka prywatności</a><a href="/newsletter/">Newsletter</a><a href="#" onclick="document.getElementById('cookie').style.display='block';return false">Ustawienia cookies</a></div>
+    </div>
+    <div class="legal"><span>© {SITE.since}-{new Date().getFullYear()} ePerfumeria · {SITE.company}</span><span>Ceny netto. Sprzedaż wyłącznie dla firm.</span></div>
+  </div></footer>
+
+  <div class="cookie" id="cookie" role="dialog" aria-label="Ustawienia cookies">
+    Używamy tylko plików cookies niezbędnych do działania strony. Za Twoją zgodą korzystamy też z Google Analytics, żeby wiedzieć, jak używana jest strona. <a href="/polityka-prywatnosci/">Polityka prywatności</a>
+    <div class="row"><button class="ok" data-c="yes">Akceptuję analitykę</button><button data-c="no">Tylko niezbędne</button></div>
+  </div>
+  <script is:inline>
+    (function () {
+      var K = 'ep_consent', box = document.getElementById('cookie'), v = null;
+      try { v = localStorage.getItem(K); } catch (e) {}
+      function ga() { /* identyfikator Google Analytics dla eperfumeria.eu - do uzupełnienia */ }
+      if (v === 'yes') ga(); else if (v !== 'no') box.style.display = 'block';
+      box.addEventListener('click', function (e) {
+        var c = e.target.getAttribute && e.target.getAttribute('data-c'); if (!c) return;
+        try { localStorage.setItem(K, c); } catch (e) {}
+        box.style.display = 'none'; if (c === 'yes') ga();
+      });
+    })();
+  </script>
+</body>
+</html>

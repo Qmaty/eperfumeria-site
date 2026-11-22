@@ -1,0 +1,7 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../data/site';
+---
+<Page title="Nie znaleziono strony | ePerfumeria" description="Strona, której szukasz, nie istnieje." h1="Nie znaleziono strony" lead="Strona mogła zostać przeniesiona. Spróbuj tutaj:" noindex>
+  <p><a class="btn btn-dark" style="color:#fff" href={SITE.order}>Wyszukaj produkty i ceny</a> <a class="btn btn-line" href="/">Strona główna</a></p>
+</Page>

@@ -1,0 +1,16 @@
+---
+import Base from './Base.astro';
+interface Props { title: string; description: string; eyebrow?: string; h1: string; lead?: string; noindex?: boolean; jsonld?: object; image?: string; type?: string; img?: string; imgAlt?: string; imgPos?: string }
+const p = Astro.props;
+---
+<Base title={p.title} description={p.description} noindex={p.noindex} jsonld={p.jsonld} image={p.image || (p.img ? `/img/${p.img}.webp` : undefined)} type={p.type}>
+  <div class={p.img ? 'page-hero has-img' : 'page-hero'}><div class="wrap">
+    <div class="ph-txt">
+      {p.eyebrow && <div class="eyebrow">{p.eyebrow}</div>}
+      <h1 class="serif">{p.h1}</h1>
+      {p.lead && <p>{p.lead}</p>}
+    </div>
+    {p.img && <div class="ph-img"><img src={`/img/${p.img}.webp`} srcset={`/img/${p.img}-700.webp 700w, /img/${p.img}.webp 1376w`} sizes="(max-width:900px) 100vw, 560px" alt={p.imgAlt || ''} style={`object-position:${p.imgPos || '50% 50%'}`} width="1376" height="768" fetchpriority="high" decoding="async" /></div>}
+  </div></div>
+  <div class="prose"><slot /></div>
+</Base>

@@ -1,0 +1,13 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../data/site';
+
+---
+<Page img="cat-makijaz" imgAlt="Wizażystka wykonuje makijaż" imgPos="50% 50%" title="Makijaż hurt - kosmetyki kolorowe hurtowo | ePerfumeria" description="Hurtownia kosmetyków kolorowych: podkłady, pudry, tusze do rzęs, pomadki i lakiery. Dystrybucja Maybelline, L'Oréal Paris, Bourjois, Rimmel i Max Factor." eyebrow="Makijaż hurtowo" h1="Kosmetyki do makijażu w hurcie" lead="Makijaż twarzy, oczu i ust oraz lakiery do paznokci, w tym marki z naszej oficjalnej dystrybucji.">
+  <p>Kosmetyki kolorowe to jedna z najszybciej rotujących kategorii w drogeriach i sklepach internetowych. Oferujemy zarówno marki z oficjalnej polskiej dystrybucji, jak i szeroki wybór od europejskich dostawców.</p>
+  <h2>Marki z naszej dystrybucji</h2>
+  <ul><li><a href="/hurtownia-kosmetyczna-maybelline/">Maybelline New York</a> i <a href="/hurtownia-kosmetyczna-loreal/">L'Oréal Paris</a>,</li><li>Bourjois, Rimmel London, Max Factor i Sally Hansen (Coty).</li></ul>
+  <h2>Co znajdziesz w ofercie</h2>
+  <ul><li>podkłady, korektory, pudry, róże i bronzery,</li><li>tusze do rzęs, eyelinery, kredki i cienie,</li><li>pomadki, błyszczyki i konturówki,</li><li>lakiery i odżywki do paznokci,</li><li>zestawy prezentowe z kosmetyczkami.</li></ul>
+  <div class="cta-box"><h3 style="margin-top:0;color:#fff">Sprawdź ceny hurtowe</h3><p style="margin:0 0 14px">Ponad {SITE.products} produktów z aktualnymi cenami netto, bez rejestracji i logowania.</p><a class="btn btn-gold" style="color:#fff" href={SITE.order}>Wyszukaj produkty i zamów</a></div>
+</Page>
