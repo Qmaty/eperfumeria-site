@@ -1,0 +1,32 @@
+# ePerfumeria
+
+> Hurtownia oryginalnych perfum i kosmetyków z Warszawy, działająca od 2009 r. (QLINIQUE Sp. z o.o.). Sprzedaje wyłącznie firmom. Ceny hurtowe netto są dostępne online bez rejestracji: ponad 500 000 produktów od ponad 800 sprawdzonych dostawców z Europy oraz oficjalna polska dystrybucja L'Oréal (L'Oréal Paris, Maybelline New York, Garnier, Mixa) i Coty (Bourjois, Rimmel, Max Factor, Sally Hansen, Mexx, Adidas, Bruno Banani).
+
+Najważniejsze informacje:
+- Wyłącznie sprzedaż B2B (firmy z NIP); bez sprzedaży detalicznej, bez marketplace'ów, bez dropshippingu.
+- Ceny netto w PLN. Każdy dostawca ma własną minimalną wartość zamówienia, podaną w cenniku.
+- Zamówienie: wyszukiwarka online lub cennik Excel, wysyłka zamówienia e-mailem, płatność na podstawie faktury pro forma, typowa realizacja 7-10 dni roboczych.
+- Zestawy prezentowe z perfum i kosmetyków dla firm (prezenty dla pracowników i klientów).
+- Kontakt: info@eperfumeria.eu, +48 601 333 444, ul. Rzeźbiarska 70, 04-620 Warszawa. NIP 5252457256.
+- Wersja angielska z cenami w EUR (eksport, klienci z UE): https://perfume-supplier.eu/
+
+## Ceny i zamówienia
+- [Wyszukaj produkty i zamów (ceny online, bez logowania)](https://eperfumeria.eu/b2b/zamowienie_PLN.html)
+- [Cenniki do pobrania (Excel)](https://eperfumeria.eu/b2b/)
+- [Cennik - warunki i rabaty](https://eperfumeria.eu/cennik/)
+
+## Oferta
+- [Perfumy hurt](https://eperfumeria.eu/perfumy-hurt/)
+- [Kosmetyki hurt](https://eperfumeria.eu/kosmetyki/)
+- [Makijaż hurt](https://eperfumeria.eu/makijaz/)
+- [Zestawy prezentowe dla firm](https://eperfumeria.eu/zestawy-prezentowe-dla-firm/)
+
+## Firma i zasady
+- [Zasady współpracy](https://eperfumeria.eu/wspolpraca/)
+- [O nas](https://eperfumeria.eu/o-nas/)
+- [Dostawa](https://eperfumeria.eu/dostawa/)
+- [Regulamin](https://eperfumeria.eu/regulamin/)
+- [Kontakt](https://eperfumeria.eu/kontakt/)
+
+## Poradnik
+- [Poradnik hurtowy](https://eperfumeria.eu/poradnik/)
