@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm.astro';
 
 ---
 <Page img="kontakt" imgAlt="Showroom ePerfumeria z kartonami zamówień" imgPos="50% 50%" title="Kontakt - hurtownia perfum i kosmetyków | ePerfumeria" description="Kontakt z hurtownią perfum i kosmetyków ePerfumeria w Warszawie: e-mail, telefon, formularz, dane firmy i rachunek bankowy." eyebrow="Kontakt" h1="Porozmawiajmy o Twoim zamówieniu" lead="Wyślij zamówienie lub pytanie. Odpowiadamy w dni robocze, zwykle w ciągu kilku godzin.">
-  <div class="cards" style="grid-template-columns:1fr 1fr;margin-bottom:30px">
+  <div class="cards cards-2" style="margin-bottom:30px">
     <a class="card" href={`mailto:${SITE.email}`}><div class="eyebrow">E-mail</div><h3>{SITE.email}</h3><p>Zamówienia, wyceny i pytania</p></a>
     <a class="card" href={`tel:${SITE.phoneHref}`}><div class="eyebrow">Telefon</div><h3>{SITE.phone}</h3><p>Poniedziałek-piątek, 9:00-17:00</p></a>
   </div>

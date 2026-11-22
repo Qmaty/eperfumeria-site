@@ -4,7 +4,7 @@ const posts = Object.values(import.meta.glob('./*.md', { eager: true })) as any[
 posts.sort((a, b) => (a.frontmatter.h1 || '').localeCompare(b.frontmatter.h1 || '', 'pl'));
 ---
 <Page title="Poradnik hurtowy - perfumy i kosmetyki B2B | ePerfumeria" description="Poradniki dla sklepów, drogerii, perfumerii i hurtowni: jak kupować perfumy i kosmetyki hurtowo, jak wybrać dostawcę i marki, które się sprzedają." eyebrow="Poradnik" h1="Poradnik hurtowy" lead="Praktyczne wskazówki dla perfumerii, drogerii, sklepów internetowych i hurtowni.">
-  <div class="cards" style="grid-template-columns:1fr 1fr">
+  <div class="cards cards-2">
     {posts.map((p) => <a class="card" href={p.url + '/'}><div class="eyebrow">Poradnik</div><h3>{p.frontmatter.h1}</h3><p>{p.frontmatter.description}</p></a>)}
   </div>
 </Page>

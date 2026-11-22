@@ -214,7 +214,23 @@ nav a.hl:hover{background:#000;color:#fff}
 .offer b{font-size:15px;line-height:1.35}
 .offer span{font-size:14px;color:var(--muted)}
 a.cat{text-decoration:none;color:inherit;display:block}a.cat:hover h3{color:var(--gold)}
-.logo .wordmark{display:block;height:22px;width:auto;color:var(--ink);margin:2px 0 6px}
+.logo .wordmark{display:block;height:22px;width:auto;color:#6e6a65;margin:2px 0 6px}
 @media(max-width:900px){.logo .wordmark{height:18px}}
 .nl-extra{display:contents}
 .nl-extra[hidden]{display:none}
+/* telefon: nic nie może wychodzić poza szerokość ekranu */
+body{overflow-x:clip}
+.cards>*,.cats>*,.band>*,.list>*,.steps>*,.stats .wrap>*,.offers>*,footer .cols>*{min-width:0}
+.card,.cat{overflow-wrap:anywhere}
+.cards.cards-2{grid-template-columns:1fr 1fr}
+@media(max-width:700px){
+ .cards.cards-2{grid-template-columns:1fr}
+ .cats,.band{gap:12px}
+ .cat div.t{padding:14px 14px 16px}.cat h3{font-size:21px}.cat p{font-size:13px}
+ .card{padding:20px}.card h3{font-size:23px}
+}
+@media(max-width:420px){
+ header .wrap{gap:12px}
+ .logo .wordmark{height:15px}.logo small{letter-spacing:1.4px;font-size:9px}
+ .logo svg,.logo .mark{width:38px;height:24px}
+}
