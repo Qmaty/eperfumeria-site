@@ -10,6 +10,7 @@ import '../styles/global.css';
 import Logo from '../components/Logo.astro';
 import NewsletterForm from '../components/NewsletterForm.astro';
 import Brands from '../components/Brands.astro';
+import Wordmark from '../components/Wordmark.astro';
 import { SITE, NAV } from '../data/site';
 
 interface Props { title: string; description: string; image?: string; type?: string; noindex?: boolean; jsonld?: object }
@@ -58,7 +59,7 @@ const org = {
   <div class="top"><div class="wrap"><span>Tylko B2B · Hurtownia perfum i kosmetyków od {SITE.since} r.</span><span><a href="/newsletter/">Newsletter</a> · <a href={`mailto:${SITE.email}`}>{SITE.email}</a> · <a href={`tel:${SITE.phoneHref}`}>{SITE.phone}</a></span></div></div>
   <header>
     <div class="wrap">
-      <a class="logo" href="/" aria-label="ePerfumeria - strona główna"><Logo /><span><b class="wm wm-ep">ePerfumeria</b><small>Hurtownia · Warszawa · od {SITE.since}</small></span></a>
+      <a class="logo" href="/" aria-label="ePerfumeria - strona główna"><Logo /><span><Wordmark /><small>Hurtownia · Warszawa · od {SITE.since}</small></span></a>
       <nav aria-label="Menu główne">
         {NAV.map((n) => <a href={n.href} class={n.highlight ? 'hl' : ''} aria-current={path === n.href ? 'page' : undefined}>{n.label}</a>)}
       </nav>

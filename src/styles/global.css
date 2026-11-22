@@ -214,3 +214,5 @@ nav a.hl:hover{background:#000;color:#fff}
 .offer b{font-size:15px;line-height:1.35}
 .offer span{font-size:14px;color:var(--muted)}
 a.cat{text-decoration:none;color:inherit;display:block}a.cat:hover h3{color:var(--gold)}
+.logo .wordmark{display:block;height:22px;width:auto;color:var(--ink);margin:2px 0 6px}
+@media(max-width:900px){.logo .wordmark{height:18px}}
