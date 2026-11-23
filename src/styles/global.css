@@ -234,3 +234,7 @@ body{overflow-x:clip}
  .logo .wordmark{height:15px}.logo small{letter-spacing:1.4px;font-size:9px}
  .logo svg,.logo .mark{width:38px;height:24px}
 }
+/* długie słowa (np. niemieckie) nie mogą rozpychać strony */
+h1,h2,h3,h4{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+.page-hero .wrap>*,.hero>*,.why>*,.dist .grid>*,.live .wrap>*,.nlband .wrap>*{min-width:0}
+.prose{overflow-wrap:break-word}
